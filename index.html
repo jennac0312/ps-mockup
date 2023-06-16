@@ -15,7 +15,7 @@
             <h5>Grow your tech career in only 2-4 at no cost to you, ever.</h5>
             <button class="apply">APPLY NOW</button>
         </div>
-        <span class="exit">X</span>
+        <span class="exit" onclick="closeHeader()">X</span>
     </nav>
 
     <header>
@@ -31,7 +31,7 @@
             <p>🔍</p>
         </div>
         <div class="midScreen smallScreen menuContainer">
-            <img src="https://www.freeiconspng.com/thumbs/menu-icon/menu-icon-24.png" alt="" class="lines">
+            <img src="https://www.freeiconspng.com/thumbs/menu-icon/menu-icon-24.png" alt="lwjhglwejgnwlkdjgBNWKJ" class="lines">
             <span class="tinyText">MENU</span>
         </div>
     </header>
@@ -60,11 +60,12 @@
         <h2>Per Scholas is Unlocking Potential <br> and Changing the Face of Tech</h2>
         <img src="https://perscholas.org/wp-content/uploads/2023/05/screen-1000x698.jpg" alt="" class="video">
     </div>
-
+    
+    <div class="bottomHalf">
     <div class="alumniContainer">
         <div class="top">
             <p>WHERE OUR ALUMNI WORK</p>
-            <p class="arrows maxScreen midScreen">← →</p>
+            <p class="arrows maxScreen midScreen"> <span class="leftArrow" onclick="scrollAlumni('left')">←</span><span class="rightArrow" onclick="scrollAlumni('right')">→</span></p>
         </div>
         <div class="imageContainer">
             <img src="https://perscholas.org/wp-content/uploads/2023/05/logo-tek-500x135.png" alt="">
@@ -84,13 +85,15 @@
             <button class="supportButton">DONATE TODAY</button>
         </div>
     </div>
-
+    
     <div class="bottomLogo">
         <img src="https://perscholas.org/wp-content/themes/per-scholas/assets/images/logo1.svg" alt="" class="logoBottom">
     </div>
     <hr>
-
-
-    <script src="app"></script>
+</div>
+<!-- <div class="" style="height: 200px; background-color: white;"></div> -->
+    
+    
+    <script src="app.js"></script>
 </body>
 </html>

@@ -1,7 +1,8 @@
 body{
     margin: 0;
-    background-color: rgba(128, 128, 128, .3);
+    background-color: rgba(128, 128, 128, .15);
     /* font-family: monospace; */
+    /* overflow-x: hidden !important; */
 }
 
 nav{
@@ -45,10 +46,16 @@ nav{
     margin-right: 10px;
 }
 
+.exit:hover{
+    cursor: pointer;
+    color: orangered;
+}
+
 
 /* header */
 header{
     /* border: 2px solid green; */
+    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -171,6 +178,11 @@ header{
 }
 
 
+/* bottom half container */
+.bottomHalf{
+    background-color: white;
+    padding-top: 20px
+}
 
 /* alumni container */
 .alumniContainer{
@@ -236,11 +248,161 @@ header{
 
 
 
-/* .hidden{
-    display: none;
-} */
+/* media queries */
+/* big screen */
+@media(max-width: 1200px){
+    .menuContainer{
+        display: none;
+    }
+    .header{
+        background-color: white;
+    }
+    .optionsContainer{
+        /* border: 2px solid red; */
+        font-size: .9em;
+    }
+    .optionsContainer p {
+        /* border: 2px solid green; */
+        min-width: fit-content;
+    }
+    .videoContainer{
+        /* border: 2px solid green; */
+        margin-bottom: 0;
+        margin-top: 70px;
+    }
+    .alumniContainer{
+        width: 100%;
+        height: 200px;
+        padding-top: 15px;
+        /* justify-content: space-around; */
+        /* align-content: space-around; */
+    }
+    .arrows{
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+    .alumniContainer > *{
+        /* border: 2px solid red; */
+        width: 80%;
+        margin: 20px auto;
+    }
+    .support{
+        margin-left: 0;
+        height: 350px;
+        margin-bottom: 20px;
+    }
+    .supportImg{
+        /* width */
+    }
+    .support .rightSide{
+        margin-left: -45px;
+        width: 55%;
+        padding-right: 30px
+    }
+    .support .rightSide > *{
+        /* border: 2px solid yellow; */
+        max-width: 80%;
+        margin-left: 80px;
+    }
+    .supportButton{
+        margin-top: 20px;
+        font-size: .7em;
+        width: 130px;
+        /* font-weight: bold; */
+    }
+    .bottomLogo{
+        /* border: 2px solid red; */
+        width: 81%;
+        margin: auto;
+    }
+    .logoBottom{
+        margin-top: 40px;
+        margin-left: 20px;
+        height: 20px;
+        margin-bottom: 10px;
+    }
+    hr{
+        margin-bottom: 60px;
+        width: 80%
+    }
+}
 
-/* phone screen */
+@media (min-width: 1200px) {
+    body{
+        width: 1202px;
+        margin: auto;
+        border: 2px solid red;
+        /* trying to prevent support img from overlowing body ... so that page can have max-width */
+        /* overflow: hidden !important; why its not working? */
+        overflow-x: hidden;
+    }
+    .support{
+        /* overflow: hidden !important; still no */
+        overflow-x: hidden;
+    }
+    .supportImg{
+        /* overflow: hidden !important; also no */
+        overflow-x: hidden;
+    }
+    .bottomLogo{
+        margin-top: 20px
+    }
+    
+}
+/* hide options */
+@media (max-width: 1080px) {
+    .optionsContainer{
+        display: none;
+    }
+    header{
+        justify-content: space-between;
+    }
+    header > *{
+        /* border: 2px solid red; */
+        margin: 0 30px;
+    }
+    .menuContainer{
+        display: block !important;
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* justify-content: space-between; */
+        margin-right: 20px !important;
+        /* border: 2px solid red; */
+        opacity: .7;
+        margin-right: 50px !important;
+    }
+    .lines{
+        display: block;
+        height: 20px;
+        margin: auto;
+        /* margin-top: -8px; */
+        margin-bottom: 3px;
+    }
+    .tinyText{
+        font-size: .7em;
+        font-weight: bold;
+    }
+    .informationContainer .title{
+        /* border: 2px solid red; */
+        max-width: 300px
+    }
+}
+
+/* hide menu */
+@media (min-width: 1050px) {
+    .menuContainer{
+        display: none;
+    }
+    .informationContainer{
+        border: 2px solid red
+    }
+    .informationContainer .leftSide, .informationContainer .rightSide{
+        border: 2px solid green;
+        width: 40%;
+    }
+}
+
+/* phone */
 @media (max-width: 900px){
     body{
         width: 100%
@@ -347,16 +509,16 @@ header{
     .support{
         margin-left: 0;
         height: 350px;
-        background-color: white;
-        width: 100%;
+        /* border: 2px solid red; */
     }
     .supportImg{
         /* width */
     }
 
     .support .rightSide{
-        margin-left: -45px;
-        width: 55%
+        /* margin-left: -45px; */
+        width: 55%;
+        margin: 0;
     }
     .support .rightSide > *{
         /* border: 2px solid yellow; */
@@ -379,99 +541,158 @@ header{
         margin-left: 20px;
         height: 20px;
     }
-    @media (max-width:720px){
-        .support{
-            flex-wrap: wrap;
-            width: 100%;
-            margin: 0;
 
+    /* smaller screen */
+    @media (max-width: 720px) {
+        .support{
+            /* flex-wrap: wrap; */
+            width: 100%;
+            display: block;
+            margin: 0;
         }
         .supportImg, .support .rightSide{
-            margin: 0;
-            width: 100%;
+            margin: 0 !important;
+            width: 100% !important;
             height: fit-content;
             font-size: .8em;
-            /* display: flex; */
+            display: flex;
             /* flex-wrap: wrap; */
         }
         .supportImg{
             margin: auto;
-            /* width: 100%; */
-            /* height: 80%; */
+            width: auto;
+            height: 80%;
         }
         .support .rightSide{
-            /* padding: 25px 0; */
-            /* width: 10000px; */
-            background-color: green;
+            padding: 25px 0;
+            width: 100%;
+        }
+        .support .rightSide > *{
+            /* border: 2px solid yellow; */
+            font-size: 1.5em;
         }
         .supportTitle + p{
             font-size: 1.2em;
             color: rgba(255, 255, 255, .9);
         }
         .supportButton{
+            font-size: .9em !important;
             width: 150px;
             margin-top: 20px;
         }
         .logoBottom{
-            margin-top: 20px;
+            margin-top: 200px !important;
             height: 15px;
             margin-left: 20px;
-            display: block;
         }
+        
     }
 }
 
+/* hide */
+.hidden{
+    display: none !important;
+}
 
 
+/* hovers */
+.apply:hover, header *:hover, button:hover, .arrows:hover, .imageContainer img {
+    cursor: pointer;
+}
 
-/* big screen */
-@media(max-width: 1200px){
-    .menuContainer{
-        display: none;
-    }
-    .alumniContainer{
-        width: 100%;
-        height: 200px;
-        padding-top: 15px;
-        /* justify-content: space-around; */
-        /* align-content: space-around; */
-    }
-    .alumniContainer > *{
-        /* border: 2px solid red; */
-        width: 80%;
-        margin: 20px auto;
-    }
-    .support{
-        margin-left: 0;
-        height: 350px
-    }
-    .supportImg{
-        /* width */
-    }
+.menuContainer:hover{
+    opacity: 1;
+}
 
-    .support .rightSide{
-        margin-left: -45px;
-        width: 55%
-    }
-    .support .rightSide > *{
-        /* border: 2px solid yellow; */
-        max-width: 80%;
-        margin-left: 50px;
-    }
-    .supportButton{
-        margin-top: 20px;
-        font-size: .7em;
-        width: 130px;
-        /* font-weight: bold; */
-    }
-    .bottomLogo{
-        /* border: 2px solid red; */
-        width: 81%;
-        margin: auto;
-    }
-    .logoBottom{
-        margin-top: 50px;
-        margin-left: 20px;
-        height: 20px;
+.rightArrow:hover, .leftArrow:hover{
+    color: rgb(238, 95, 0);
+}
+
+
+@keyframes smoothColor {
+    100%{
+        background-color: #ce8c11;
     }
 }
+
+button:hover{
+    animation: smoothColor 1s forwards;
+}
+
+
+@keyframes scrollAlumniRight {
+    0%{
+        transform: translateX(0) ;
+        /* display: none; */
+    }
+    25%{
+        /* opacity: 0; */
+    }
+    50%{
+        transform: translateX(100vw);
+        opacity: 0;
+    }
+    75%{
+        opacity: 0;
+        transform: translateX(-100vw);
+    }
+    100%{
+        /* transform: translateX(100vh); */
+    }
+}
+
+.scrollRight{
+    animation: scrollAlumniRight 1s ease-in-out;
+}
+
+@keyframes scrollAlumniLeft {
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        
+    }
+    50%{
+        transform: translateX(-100vw);
+        opacity: 0;
+    }
+    75%{
+        opacity: 0;
+        transform: translateX(100vw);
+    }
+    100%{
+    }
+}
+
+.scrollLeft{
+    animation: scrollAlumniLeft 1.5s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes zoomOut {
+    0%{
+        background-size: 150%;
+    }
+    100%{
+        background-size: 108%;
+    }
+}
+
+/* have to target the indiviual backgrounds and not their container. container brings it to foreground */
+/* z index didnt work on container... does work on indiviudal backgrounds */
+.leftBackground, .rightBackground{
+    /* animation: fadeIn, zoomOut, 4s, 2s ease-out; */
+    z-index: -1;
+    animation-name: fadeIn, zoomOut;
+    animation-duration: 4s, 2s ;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+/* just learned i can call 2 keyframes at once */
