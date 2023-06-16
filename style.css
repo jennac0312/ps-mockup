@@ -1,0 +1,237 @@
+body{
+    margin: 0
+}
+
+nav{
+    border: 2px solid red;
+    background-color: 
+    #09507c;
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    height: 70px;
+    color: white;
+}
+
+.center{
+    display: flex;
+    margin: 10px auto;
+    /* align-items: center; */
+    align-items: center;
+    /* border: 2px solid yellow */
+}
+
+.center h5{
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.apply{
+    height: 40px;
+    margin-left: 20px;
+    /* margin-right: 20px; */
+    background-color: #fec14f;
+    font-weight: bold;
+    width: 130px;
+
+}
+
+.exit{
+    margin-bottom: 20px;
+    /* margin-left: 20px; */
+    margin-right: 10px;
+}
+
+
+/* header */
+header{
+    border: 2px solid green;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px
+}
+
+.logo{
+    width: 200px;
+    margin-left: 60px
+
+}
+
+/* max screen only */
+.optionsContainer{
+    display: flex;
+    margin-left: 100px;
+}
+.optionsContainer p {
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: .8em;
+}
+/* =================== */
+
+.leftBackground{
+    background-image: url('https://perscholas.org/wp-content/uploads/2023/05/20190625-143859-_DSC5051-scaled1-1000x1000.jpg');
+    background-size: cover;
+}
+
+.rightBackground{
+    background-image: url('https://perscholas.org/wp-content/uploads/2023/05/perscholas_main_servicesfeature1.jpg');
+    background-size: cover;
+}
+
+/* images */
+.images{
+    border: 2px solid purple;
+    height: 500px;
+    display: flex;
+}
+
+.leftBackground, .rightBackground{
+    height: 100%;
+    width: 50%;
+    border: 2px solid orange
+}
+
+
+/* info containers */
+
+.informationContainer{
+    border: 2px solid red;
+    display: flex;
+    justify-content: space-around;
+    margin-top: -80px;
+}
+
+.leftSide, .rightSide{
+    border: 2px solid blue;
+    width: 400px;
+    background-color: white;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.leftSide > *, .rightSide > *{
+    margin: 5px 20px
+}
+
+.info{
+    font-size: .7em;
+    display: flex;
+    align-items: center;
+    /* margin-top: 20px */
+}
+
+.leftSide .info{
+    /* margin-top: -6px; */
+}
+
+.title{
+    margin-bottom: 10px
+}
+.mini{
+    margin-right: 17px;
+}
+
+.infoButton{
+    width: 90%;
+    height: 40px;
+    background-color: #fec14f;
+    border: none;
+    font-weight: bold;
+    margin-top: 15px;
+    /* margin-right: -20px; */
+}
+.started{
+    /* margin-top: -10px; */
+}
+
+
+
+/* video container */
+
+.videoContainer{
+    border: 2px solid green;
+    margin: 50px auto;
+    /* width: fit-content; */
+    text-align: center;
+    height: 600px
+}
+
+.video{
+    width: 600px;
+    height: 400px;
+
+}
+
+
+
+/* alumni container */
+.alumniContainer{
+    border: 2px solid orange;
+    width: 80%;
+    margin: auto;
+    height: 180px;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.imageContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px
+}
+
+.imageContainer img {
+    height: 50px;
+    width: auto;
+}
+
+.pShores{
+    /* height: 100px !important; */
+    /* width: auto; */
+}
+
+.support{
+    display: flex;
+    border: 2px solid grey;
+    margin-left: -76px;
+}
+
+.supportImg{
+    width: 40%
+}
+
+.support .rightSide{
+    background-color: #0079c0;
+    color: white;
+    height: inherit;
+    margin-left: -80px;
+    width: 50%
+}
+
+.supportTitle{
+    margin-bottom: 10px
+}
+
+.supportButton{
+    height: 35px;
+    background-color: #fec14f;
+    border: none;
+    font-weight: bold;
+
+}
+
+
+
+
+.hidden{
+    display: none;
+}
