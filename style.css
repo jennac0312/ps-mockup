@@ -1,9 +1,11 @@
 body{
-    margin: 0
+    margin: 0;
+    background-color: rgba(128, 128, 128, .3);
+    /* font-family: monospace; */
 }
 
 nav{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     background-color: 
     #09507c;
     display: flex;
@@ -33,6 +35,7 @@ nav{
     background-color: #fec14f;
     font-weight: bold;
     width: 130px;
+    border: none
 
 }
 
@@ -45,7 +48,7 @@ nav{
 
 /* header */
 header{
-    border: 2px solid green;
+    /* border: 2px solid green; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -82,7 +85,7 @@ header{
 
 /* images */
 .images{
-    border: 2px solid purple;
+    /* border: 2px solid purple; */
     height: 500px;
     display: flex;
 }
@@ -90,21 +93,21 @@ header{
 .leftBackground, .rightBackground{
     height: 100%;
     width: 50%;
-    border: 2px solid orange
+    /* border: 2px solid orange */
 }
 
 
 /* info containers */
 
 .informationContainer{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: flex;
     justify-content: space-around;
     margin-top: -80px;
 }
 
 .leftSide, .rightSide{
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     width: 400px;
     background-color: white;
     height: 250px;
@@ -154,7 +157,7 @@ header{
 /* video container */
 
 .videoContainer{
-    border: 2px solid green;
+    /* border: 2px solid green; */
     margin: 50px auto;
     /* width: fit-content; */
     text-align: center;
@@ -171,10 +174,11 @@ header{
 
 /* alumni container */
 .alumniContainer{
-    border: 2px solid orange;
+    /* border: 2px solid orange; */
     width: 80%;
     margin: auto;
     height: 180px;
+    background-color: white;
 }
 
 .top{
@@ -201,7 +205,7 @@ header{
 
 .support{
     display: flex;
-    border: 2px solid grey;
+    /* border: 2px solid grey; */
     margin-left: -76px;
 }
 
@@ -232,6 +236,242 @@ header{
 
 
 
-.hidden{
+/* .hidden{
     display: none;
+} */
+
+/* phone screen */
+@media (max-width: 900px){
+    body{
+        width: 100%
+    }
+    .center h5{
+        font-size: 1em;
+    }
+    .apply{
+        width: 150px;
+        height: 30px;
+        margin-left: 8px;
+
+    }
+    .exit{
+        font-size: .7em;
+        margin-left: 10px;
+        margin-top: -20px
+    }
+    .logo{
+        width: 120px;
+        margin-left: 10px
+    }
+    .optionsContainer{
+        display: none;
+    }
+    .menuContainer{
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* justify-content: space-between; */
+        margin-right: 20px;
+    }
+    .lines{
+        display: block;
+        height: 20px;
+        margin: auto;
+        /* margin-top: -10px; */
+        margin-bottom: 3px;
+    }
+    .tinyText{
+        font-size: .7em;
+        font-weight: bold;
+    }
+    .images{
+        flex-wrap: wrap;
+    }
+    .leftBackground, .rightBackground{
+        width: 100%;
+        height: 80%;
+        margin-bottom: 180px
+    }
+    .informationContainer{
+        flex-wrap: wrap;
+        /* align-self: stretch; */
+        margin-top: -200px
+    }
+    .leftSide, .rightSide{
+        width: 90%;
+        margin-top: -20px;
+        margin-bottom: 50px;
+        /* border: 2px solid green; */
+    }
+    .leftSide{
+        margin-bottom: 380px
+    }
+    .videoContainer{
+        margin-top: 0;
+        height: fit-content;
+        margin-bottom: 30px
+    }
+    .videoContainer h2{
+        font-size: 1.3em;
+    }
+    .video{
+        width: 100%;
+        height: auto;
+    }
+    .alumniContainer{
+        background-color: white;
+        width: 100%;
+        height: 200px;
+    }
+    .top{
+        margin-left: 20px;
+        /* justify-content: space-around; */
+        font-size: .8em;
+        margin-bottom: 20px;
+    }
+    .top p{
+        margin-top: 40px
+    }
+    .arrows{
+        display: none;
+    }
+    .imageContainer{
+        justify-content: space-around;
+    }
+    .imageContainer img{
+        width: auto;
+        height: 45px;
+    }
+    .wells{
+        display: none;
+    }
+    .support{
+        margin-left: 0;
+        height: 350px;
+        background-color: white;
+        width: 100%;
+    }
+    .supportImg{
+        /* width */
+    }
+
+    .support .rightSide{
+        margin-left: -45px;
+        width: 55%
+    }
+    .support .rightSide > *{
+        /* border: 2px solid yellow; */
+        max-width: 80%;
+        margin-left: 50px;
+    }
+    .supportButton{
+        margin-top: 20px;
+        font-size: .7em;
+        width: 130px;
+        /* font-weight: bold; */
+    }
+    .bottomLogo{
+        /* border: 2px solid red; */
+        width: 81%;
+        margin: auto;
+    }
+    .logoBottom{
+        margin-top: 50px;
+        margin-left: 20px;
+        height: 20px;
+    }
+    @media (max-width:720px){
+        .support{
+            flex-wrap: wrap;
+            width: 100%;
+            margin: 0;
+
+        }
+        .supportImg, .support .rightSide{
+            margin: 0;
+            width: 100%;
+            height: fit-content;
+            font-size: .8em;
+            /* display: flex; */
+            /* flex-wrap: wrap; */
+        }
+        .supportImg{
+            margin: auto;
+            /* width: 100%; */
+            /* height: 80%; */
+        }
+        .support .rightSide{
+            /* padding: 25px 0; */
+            /* width: 10000px; */
+            background-color: green;
+        }
+        .supportTitle + p{
+            font-size: 1.2em;
+            color: rgba(255, 255, 255, .9);
+        }
+        .supportButton{
+            width: 150px;
+            margin-top: 20px;
+        }
+        .logoBottom{
+            margin-top: 20px;
+            height: 15px;
+            margin-left: 20px;
+            display: block;
+        }
+    }
+}
+
+
+
+
+/* big screen */
+@media(max-width: 1200px){
+    .menuContainer{
+        display: none;
+    }
+    .alumniContainer{
+        width: 100%;
+        height: 200px;
+        padding-top: 15px;
+        /* justify-content: space-around; */
+        /* align-content: space-around; */
+    }
+    .alumniContainer > *{
+        /* border: 2px solid red; */
+        width: 80%;
+        margin: 20px auto;
+    }
+    .support{
+        margin-left: 0;
+        height: 350px
+    }
+    .supportImg{
+        /* width */
+    }
+
+    .support .rightSide{
+        margin-left: -45px;
+        width: 55%
+    }
+    .support .rightSide > *{
+        /* border: 2px solid yellow; */
+        max-width: 80%;
+        margin-left: 50px;
+    }
+    .supportButton{
+        margin-top: 20px;
+        font-size: .7em;
+        width: 130px;
+        /* font-weight: bold; */
+    }
+    .bottomLogo{
+        /* border: 2px solid red; */
+        width: 81%;
+        margin: auto;
+    }
+    .logoBottom{
+        margin-top: 50px;
+        margin-left: 20px;
+        height: 20px;
+    }
 }
