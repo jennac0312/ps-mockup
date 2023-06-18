@@ -7,13 +7,13 @@ body{
 
 nav{
     /* border: 2px solid red; */
-    background-color: 
-    #09507c;
+    background-color: #09507c;
     display: flex;
     /* justify-content: space-around; */
     align-items: center;
     height: 70px;
     color: white;
+    margin-top: -75px;
 }
 
 .center{
@@ -36,8 +36,7 @@ nav{
     background-color: #fec14f;
     font-weight: bold;
     width: 130px;
-    border: none
-
+    border: none;
 }
 
 .exit{
@@ -246,6 +245,142 @@ header{
 }
 
 
+/* hr */
+hr{
+    opacity: .25;
+    width: inherit !important;
+}
+
+
+/* footer */
+footer{
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 70px;
+    margin-top: -30px;
+    /* border: 2px solid rebeccapurple; */
+    font-size: 1.1em;
+}
+footer > *{
+    margin: 0 30px
+}
+
+.infoTabsContainer{
+    /* border: 2px solid green */
+}
+
+.infoTabsContainer p {
+    /* border: 2px solid green; */
+    width: fit-content;
+}
+/* there is the slightest delay in the hover color change on the real site */
+.infoTabsContainer > p:hover {
+    color: rgb(33, 95, 226);
+    cursor: pointer;
+}
+
+.bold{
+    font-weight: bold;
+}
+.light{
+    opacity: .8;
+}
+
+/* contact container */
+.contactContainer{
+    /* border: 2px solid saddlebrown; */
+    /* margin-top: -20px */
+}
+.contactContainer > *{
+    display: flex;
+    /* border: 2px solid cadetblue; */
+    margin-bottom: -6px;
+}
+.contactContainer > * > *{
+    margin-right: 10px;
+}
+.contactContainer .light{
+    opacity: .8;
+    /* text-decoration: underline; */
+    border-bottom: 1px solid black;
+}
+
+/* there is the slightest delay in the hover color change on the real site */
+.contactContainer .light:hover{
+    color: rgb(33, 95, 226);
+    cursor: pointer;
+}
+
+.socialsContainer{
+    display: flex;
+    margin-bottom: 20px;
+}
+.socialsContainer img{
+    height: 30px;
+    width: auto;
+}
+/* also hover to light blue ... unsure how to do that for imgs ... */
+.socialsContainer img:hover{
+    /* background-color: blue; */
+    cursor: pointer;
+}
+
+
+/* monthly report container */
+.monthlyReportContainer{
+    /* border: 2px solid hotpink; */
+    font-size: 1.4em;
+}
+.monthlyReportContainer input{
+    width: 300px;
+    height: 40px;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: .8em;
+    opacity: .7;
+    margin-right: 10px
+}
+
+.monthlyReportContainer button {
+    width: 150px;
+    height: 45px;
+    background-color: #fec14f;
+    border: none;
+    font-size: .60em;
+    font-weight: bold;
+}
+
+/* rights container */
+.rightsContainer{
+    /* border: 2px solid indianred; */
+    margin-top: -10px;
+    font-size: .7em;
+}
+.rightsContainer span {
+    font-weight: normal;
+    opacity: .7;
+    margin-bottom: -12px;
+    /* border: 2px solid red; */
+}
+.rightsContainer p span:hover {
+    color:rgb(33, 95, 226)
+}
+
+.rewardsImages{
+    /* border: 2px solid seagreen; */
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 45%;
+}
+.rewardsImages img{
+    /* bordeR: 2px solid grey; */
+    height: 80px;
+}
+.rewardsImages .smallImg{
+    height: 50px
+}
 
 
 /* media queries */
@@ -334,15 +469,16 @@ header{
         border: 2px solid red;
         /* trying to prevent support img from overlowing body ... so that page can have max-width */
         /* overflow: hidden !important; why its not working? */
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
     }
     .support{
         /* overflow: hidden !important; still no */
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
     }
     .supportImg{
         /* overflow: hidden !important; also no */
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
+        /* z-index: -1; */
     }
     .bottomLogo{
         margin-top: 20px
@@ -388,17 +524,147 @@ header{
     }
 }
 
+
 /* hide menu */
 @media (min-width: 1050px) {
     .menuContainer{
         display: none;
     }
     .informationContainer{
-        border: 2px solid red
+        /* border: 2px solid red */
     }
     .informationContainer .leftSide, .informationContainer .rightSide{
-        border: 2px solid green;
+        /* border: 2px solid green; */
         width: 40%;
+    }
+    /* footer */
+    footer{
+        background-color: white;
+        padding-top: 20px;
+        padding-bottom: 70px;
+        margin-top: -30px;
+        /* border: 2px solid rebeccapurple; */
+        font-size: 1.1em;
+    }
+    footer > *{
+        margin: 0 30px
+    }
+
+    .infoTabsContainer{
+        /* border: 2px solid green */
+    }
+
+    .infoTabsContainer p {
+        /* border: 2px solid green; */
+        width: fit-content;
+    }
+    /* there is the slightest delay in the hover color change on the real site */
+    .infoTabsContainer > p:hover {
+        color: rgb(33, 95, 226);
+        cursor: pointer;
+    }
+
+    .bold{
+        font-weight: bold;
+    }
+    .light{
+        opacity: .8;
+    }
+
+    /* contact container */
+    .contactContainer{
+        /* border: 2px solid saddlebrown; */
+        /* margin-top: -20px */
+    }
+    .contactContainer > *{
+        display: flex;
+        /* border: 2px solid cadetblue; */
+        margin-bottom: -6px;
+    }
+    .contactContainer > * > *{
+        margin-right: 10px;
+    }
+    .contactContainer .light{
+        opacity: .8;
+        /* text-decoration: underline; */
+        border-bottom: 1px solid black;
+    }
+
+    /* there is the slightest delay in the hover color change on the real site */
+    .contactContainer .light:hover{
+        color: rgb(33, 95, 226);
+        cursor: pointer;
+    }
+
+    .socialsContainer{
+        display: flex;
+        margin-bottom: 20px;
+    }
+    .socialsContainer img{
+        height: 30px;
+        width: auto;
+    }
+    /* also hover to light blue ... unsure how to do that for imgs ... */
+    .socialsContainer img:hover{
+        /* background-color: blue; */
+        cursor: pointer;
+    }
+
+
+    /* monthly report container */
+    .monthlyReportContainer{
+        /* border: 2px solid hotpink; */
+        font-size: 1.4em;
+    }
+    .monthlyReportContainer input{
+        width: 300px;
+        height: 40px;
+        border: none;
+        border-bottom: 2px solid black;
+        font-size: .8em;
+        opacity: .7;
+        margin-right: 10px
+    }
+
+    .monthlyReportContainer button {
+        width: 150px;
+        height: 45px;
+        background-color: #fec14f;
+        border: none;
+        font-size: .60em;
+        font-weight: bold;
+    }
+
+    /* rights container */
+    .rightsContainer{
+        /* border: 2px solid indianred; */
+        margin-top: -10px;
+        font-size: .7em;
+    }
+    .rightsContainer span {
+        font-weight: normal;
+        opacity: .7;
+        margin-bottom: -12px;
+        /* border: 2px solid red; */
+    }
+    .rightsContainer p span:hover {
+        color:rgb(33, 95, 226)
+    }
+
+    .rewardsImages{
+        /* border: 2px solid seagreen; */
+        margin-top: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 45%;
+    }
+    .rewardsImages img{
+        /* bordeR: 2px solid grey; */
+        height: 80px;
+    }
+    .rewardsImages .smallImg{
+        height: 50px
     }
 }
 
@@ -509,7 +775,6 @@ header{
     .support{
         margin-left: 0;
         height: 350px;
-        /* border: 2px solid red; */
     }
     .supportImg{
         /* width */
@@ -541,9 +806,81 @@ header{
         margin-left: 20px;
         height: 20px;
     }
+        /* contact container */
+    .contactContainer{
+        /* border: 2px solid saddlebrown; */
+        /* display: block; */
+        /* margin-top: -20px */
+    }
+    .contactContainer > *{
+        display: block;
+        /* border: 2px solid cadetblue; */
+        margin-bottom: -6px;
+    }
+    .contactContainer > * > *{
+        /* margin-right: 10px; */
+        margin-bottom: -15px;
+        /* border: 2px solid red; */
+    }
+    .contactContainer .light{
+        opacity: .8;
+        margin-bottom: 10px;
+        /* text-decoration: underline; */
+        border-bottom: 1px solid black !important;
+        width: fit-content;
+    }
+
+    /* there is the slightest delay in the hover color change on the real site */
+    .contactContainer .light:hover{
+        color: rgb(33, 95, 226);
+        cursor: pointer;
+    }
+
+    .socialsContainer{
+        display: flex;
+        margin: 30px 0;
+        
+    }
+    .socialsContainer img{
+        height: 30px;
+        width: auto;
+    }
+    /* also hover to light blue ... unsure how to do that for imgs ... */
+    .socialsContainer img:hover{
+        /* background-color: blue; */
+        cursor: pointer;
+    }
+
+
+    /* monthly report container */
+    .monthlyReportContainer{
+        /* border: 2px solid hotpink; */
+        font-size: 1.4em;
+    }
+    .monthlyReportContainer input{
+        width: 300px;
+        height: 40px;
+        border: none;
+        border-bottom: 2px solid black;
+        font-size: .8em;
+        opacity: .7;
+        margin-right: 10px
+    }
+
+    .monthlyReportContainer button {
+        width: 150px;
+        height: 45px;
+        background-color: #fec14f;
+        border: none;
+        font-size: .60em;
+        font-weight: bold;
+    }
 
     /* smaller screen */
     @media (max-width: 720px) {
+        body{
+            min-width: fit-content;
+        }
         .support{
             /* flex-wrap: wrap; */
             width: 100%;
@@ -566,6 +903,8 @@ header{
         .support .rightSide{
             padding: 25px 0;
             width: 100%;
+            /* height: 200px;
+            overflow: hidden; */
         }
         .support .rightSide > *{
             /* border: 2px solid yellow; */
@@ -665,7 +1004,7 @@ button:hover{
 }
 
 .scrollLeft{
-    animation: scrollAlumniLeft 1.5s ease-in-out;
+    animation: scrollAlumniLeft 1s ease-in-out;
 }
 
 
@@ -696,3 +1035,58 @@ button:hover{
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 /* just learned i can call 2 keyframes at once */
+
+
+
+/* using fadeIn on the nav */
+
+@keyframes fadeInAbrupt {
+    0%{
+        /* opacity: 0; */
+        /* display: none; */
+        /* z-index: -1; */
+        /* color: white; */
+        /* background-color: white; */
+        margin-top: -75px;
+    }
+    75%{
+        /* opacity: 0; */
+        /* display: none; */
+        margin-top: -75px;
+    }
+    100%{
+        /* opacity: 1; */
+        /* display: initial; */
+        /* z-index: 0; */
+        /* background-color: #09507c; */
+        /* display: flex; */
+        margin-top: 0;
+    }
+    
+}
+
+/* did all that trial and error just to realize manipulating the margin was the best work around */
+nav{
+    animation: fadeInAbrupt 1s forwards;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation-delay: .25s;
+}
+
+/* button fade in */
+@keyframes buttonFadeInAbrupt {
+    0%{
+        /* background-color: white; */
+    }
+    75%{
+
+    }
+    100%{
+        background-color: #fec14f;
+        color: black;
+    }   
+}
+
+/* nav button{
+    animation: buttonFadeInAbrupt 1s forwards;
+    animation-delay: 1s;
+} */
